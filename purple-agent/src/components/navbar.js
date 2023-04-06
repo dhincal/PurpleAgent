@@ -17,10 +17,10 @@ export default function Navbar() {
                 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
             </Head>
             <nav className='hidden md:flex justify-center w-screen bg-gradient-to-r from-agent-purple from-40% via-agent-dark via-90% to-agent-dark font-normal tracking-widest text-xl text-white gap-x-16 py-10 '>
-                <NextLink href="#">
+                <NextLink href="/">
                     <p>KİMİZ BİZ</p>
                 </NextLink>
-                <NextLink href="#">
+                <NextLink href="/">
                     <p>
                         NE YAPIYORUZ
                     </p>
