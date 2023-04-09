@@ -9,8 +9,6 @@ export default function Navbar() {
     return (
         <>
             <Head>
-                <title>Purple Agent</title>
-                <meta name="description" content="Purple Agent" />
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
@@ -25,7 +23,7 @@ export default function Navbar() {
                         NE YAPIYORUZ
                     </p>
                 </NextLink>
-                <NextLink href="/contact">
+                <NextLink href="/contactUs">
                     <p>
                         BİZE ULAŞIN
                     </p>
