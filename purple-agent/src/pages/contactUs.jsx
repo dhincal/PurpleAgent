@@ -14,52 +14,50 @@ export default function ContactUs() {
 
     const initState = { isLoading: false, error: "", values: initValues };
 
-
     const [nameInput, setNameInput] = useState("")
     const [emailInput, setEmailInput] = useState("")
     const [phoneInput, setPhoneInput] = useState("")
     const [messageInput, setMessageInput] = useState("")
 
-    
+    const [nameBlur, setNameBlur] = useState(false)
+    const [emailBlur, setEmailBlur] = useState(false)
+    const [phoneBlur, setPhoneBlur] = useState(false)
+    const [messageBlur, setMessageBlur] = useState(false)
 
     const [state, setState] = useState(initState);
     const { values, isLoading, error } = state;
     
-   
-
-    useEffect(() => {
-    }, [nameInput])
-
-
-    const buttonDown = () => {
-        values.name = nameInput
-        values.email = emailInput
-        values.phone = phoneInput
-        values.message = messageInput
-        console.log(state);
-    }
 
    const onSubmit = async () => {
         values.name = nameInput
         values.email = emailInput
         values.phone = phoneInput
         values.message = messageInput
+       setState(() => ({
+            isLoading: true,
+        }));
     try {
-      await sendContactForm(values);
-      setState(initState);
+        await sendContactForm(values);
+        
+        setState(initState);
+        setMessageInput("");
+        setState(() => ({
+            isLoading: false,
+        }));
     } catch (error) {
-      setState((prev) => ({
-        ...prev,
-        isLoading: false,
-        error: error.message,
-      }));
+        setState((prev) => ({
+            ...prev,
+            isLoading: false,
+            error: error.message,
+        }));
+        console.log(error);
     }
   };
 
     return (
         <>
             <Head>
-                <title>Purple Agent - Promosyon</title>
+                <title>Purple Agent - Bize Ulaşın</title>
                 <meta name="description" content="Purple Agent" />
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -74,52 +72,71 @@ export default function ContactUs() {
                     width={350}
                     />
                 </Link>
-                <div className='flex flex-col gap-y-5 w-full'>
-                    <h3 className='text-6xl text-agent-purple text-center overflow-hidden font-bold whitespace-nowrap h-20'>BiZE ULAŞIN</h3>
+                <form className='flex flex-col gap-y-5 w-full overflow-y-hidden' onSubmit={(e) => e.preventDefault()}>
+                    <h3 className='text-4xl md:text-6xl text-agent-purple text-center overflow-hidden font-bold whitespace-nowrap h-20'>BiZE ULAŞIN</h3>
                     
-                    <div className='flex gap-x-24 w-full justify-between'>
-                        <div className='flex flex-col items-center gap-y-20 w-5/12'>
-                            <input 
+                    <div className='flex gap-x-24 w-full justify-between flex-col gap-y-12 md:flex-row'>
+                        <div className='flex flex-col items-center gap-y-5 md:gap-y-20 w-full md:w-5/12'>
+                            <div className='w-full flex flex-col relative gap-y-2'>
+                                <input 
                                 value={nameInput}
                                 onChange={(e) => setNameInput(e.target.value) }
+                                onBlur={(e) => e.target.value === ''? setNameBlur(false): setNameBlur(true)}
                                
-                                className='border-b-2 border-agent-gray text-2xl placeholder:text-black/60 w-full focus:text-agent-purple focus:outline-none focus:border-agent-purple focus:placeholder:text-agent-purple transition-colors duration-200' 
-                                placeholder='ADINIZ-SOYADINIZ' 
-                            />
-                            <input 
+                                className={`${nameBlur ? "" : "border-red-500"} border-b-2 border-agent-gray text-lg md:text-2xl placeholder:text-black/60 w-full focus:text-agent-purple focus:outline-none focus:border-agent-purple focus:placeholder:text-agent-purple transition-colors duration-200`} 
+                                placeholder='* ADINIZ-SOYADINIZ' 
+                                />
+                                <p className={`${nameBlur ? "opacity-0" : ""} text-sm text-red-500 italic bottom-0`}>Lütfen bir isim ve soyisim giriniz.</p>
+                            </div>
+                            <div className='w-full flex flex-col relative gap-y-2'>
+                                <input 
                                 value={emailInput} 
                                 onChange={(e) => setEmailInput(e.target.value)}
+                                onBlur={(e) => e.target.value.includes(".") && e.target.value.includes("@") ? setEmailBlur(true): setEmailBlur(false)}
                                 
-                                className='border-b-2 border-agent-gray text-2xl placeholder:text-black/60 w-full focus:text-agent-purple focus:outline-none focus:border-agent-purple focus:placeholder:text-agent-purple transition-colors duration-200' 
-                                placeholder='E-MAIL' 
-                            />
-                            <input 
+                                className={`${emailBlur ? "" : "border-red-500"} border-b-2 border-agent-gray text-lg md:text-2xl placeholder:text-black/60 w-full focus:text-agent-purple focus:outline-none focus:border-agent-purple focus:placeholder:text-agent-purple transition-colors duration-200`} 
+                                placeholder='* E-MAIL' 
+                                />
+                                <p className={`${emailBlur ? "opacity-0" : ""} text-sm text-red-500 italic bottom-0`}>Lütfen geçerli bir e-mail giriniz. </p>
+                            
+                            </div>
+                            <div className='w-full flex flex-col relative gap-y-2'>
+
+                                <input 
                                 value={phoneInput}
                                 onChange={(e) => setPhoneInput(e.target.value)}
-                               
-                                className='border-b-2 border-agent-gray text-2xl placeholder:text-black/60 w-full focus:text-agent-purple focus:outline-none focus:border-agent-purple focus:placeholder:text-agent-purple transition-colors duration-200' 
-                                placeholder='TELEFON' 
-                            />
+                                onBlur={(e) => e.target.value.length <= 4 || e.target.value.length >= 18 || e.target.value.match(/^[A-Za-z]*$/) ? setPhoneBlur(false) : setPhoneBlur(true)} 
+                                maxLength={18}
+                                className={`${phoneBlur ? "" : "border-red-500"} border-b-2 border-agent-gray text-lg md:text-2xl placeholder:text-black/60 w-full focus:text-agent-purple focus:outline-none focus:border-agent-purple focus:placeholder:text-agent-purple transition-colors duration-200`} 
+                                 placeholder='* TELEFON' 
+                                />
+                                <p className={`${phoneBlur ? "opacity-0" : ""} text-sm text-red-500 italic bottom-0`}>Lütfen bir telefon numarası giriniz. </p>
+                            
+                            </div>
                         
                         </div>
-                        <div className='w-5/12 overflow-y-hidden'>
+                        <div className='w-full md:w-5/12 overflow-y-hidden'>
                             <textarea
                                 value={messageInput}
                                 onChange={(e) => setMessageInput(e.target.value)}
-                              
-                                className='text-xl w-full min-h-full resize-none border-agent-gray border-2 p-2 focus:outline-none placeholder:text-black/60 focus:text-agent-purple focus:border-agent-purple focus:placeholder:text-agent-purple transition-colors duration-200' 
-                                placeholder='MESAJINIZ'
+                                onBlur={(e) => e.target.value === '' ? setMessageBlur(false): setMessageBlur(true)}
+                                rows={5}
+                                className={`${messageBlur ? "" : "border-red-500"} text-lg md:text-xl w-full min-h-full resize-none border-agent-gray border-2 p-2 focus:outline-none placeholder:text-black/60 focus:text-agent-purple focus:border-agent-purple focus:placeholder:text-agent-purple transition-colors duration-200`} 
+                                placeholder='* MESAJINIZ'
                             />
+                             <p className={`${messageBlur ? "opacity-0" : ""} text-sm text-red-500 italic bottom-0 mt-2`}>Lütfen bir mesaj yazınız. </p>
+                            
                         </div>
                     </div>
                     <button   
                        
-                        disabled={nameInput === "" || emailInput === "" || phoneInput === "" || messageInput === ""}
+                        disabled={ !nameBlur || !emailBlur || !phoneBlur || !messageBlur}
                         onClick={onSubmit} 
-                        className='text-white font-bold text-2xl bg-agent-purple w-5/12 self-end '>
-                        GÖNDER
+                        className={`${isLoading ? "p-1.5" : "p-1"} text-white font-bold text-2xl bg-agent-purple w-full md:w-5/12 self-end flex items-center justify-center mb-5 md:m-0 transition-all duration-200 disabled:bg-agent-purple/50`}>
+                        <p className={`${isLoading ? "hidden" : ""}`}>GÖNDER</p>
+                        <div className={`${isLoading ? "" : "hidden"} h-1 w-1 border-4 p-2.5 rounded-full border-t-agent-gray border-agent-gray/30 animate-spin`}></div>
                     </button>
-                </div>
+                </form>
             </main>
         </>
     )
