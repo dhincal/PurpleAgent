@@ -17,7 +17,7 @@ export default function Home() {
             <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
         </Head>
         <Navbar />
-        <main className='flex flex-col items-center gap-y-10 px-[20vw]'>
+        <main className='flex flex-col items-center gap-y-10 md:px-[20vw] px-10'>
            <div className='mt-10'>
              <Link href="/">
                 <Image src="/logo.png"
@@ -32,7 +32,7 @@ export default function Home() {
                 Tasarımdan baskıya giden yolda, aşağıda listelediğimiz tüm konularda çözüm ortağınız olmaya talibiz.
             </p>
 
-            <div className='flex flex-col text-2xl text-center gap-y-14 font-light'>
+            <div className='flex flex-col text-2xl text-center gap-y-14 font-light mb-16'>
                 <h6 className='font-bold'>OFSET / DİJİTAL BASKI</h6>
                 <p>Kurumsal Evrak; <br />
                 Antetli kağıt, kartvizit, zarf, sürekli form, etiket, kurum kitapçığı...
