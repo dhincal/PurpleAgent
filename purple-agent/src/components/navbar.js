@@ -18,7 +18,7 @@ export default function Navbar() {
                 <NextLink href="/kimiz">
                     <p>KİMİZ BİZ</p>
                 </NextLink>
-                <NextLink href="/">
+                <NextLink href="/" scroll={true}>
                     <p>
                         NE YAPIYORUZ
                     </p>
