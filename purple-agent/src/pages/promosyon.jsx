@@ -52,8 +52,9 @@ export default function Design({designFolderLength}) {
                         src={image}
                         height={550}
                         width={550}
-                        className='border-2 border-agent-purple z-40 overflow-y-hidden'    
-                         />                
+                        className='border-2 border-agent-purple z-40 overflow-y-hidden'  
+                        alt='promosyon'  
+                        />                
                     </Zoom>          
                 )
             )}
@@ -79,8 +80,8 @@ export default function Design({designFolderLength}) {
                     />
                 </Link>
                 <div className='flex flex-col gap-y-1 tracking-wider'>
-                    <h3 className='text-6xl text-agent-purple text-center overflow-y-hidden font-bold '>PROMOSYON</h3>
-                    <p className='text-xl text-center'>Tedarik ve İmalat</p>
+                    <h3 className='text-3xl md:text-4xl  text-agent-purple text-center overflow-y-hidden font-bold '>PROMOSYON</h3>
+                    <p className='md:text-lg text-sm text-center'>Tedarik ve İmalat</p>
                 </div>
                 <div className='mt-20 mb-20'>
                     {ImageList}
