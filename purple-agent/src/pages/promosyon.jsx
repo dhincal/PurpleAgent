@@ -5,6 +5,9 @@ import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import fs from 'fs'
 import path from 'path'
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
+
 
 
 export async function getStaticProps() {
@@ -32,16 +35,26 @@ export default function Design({designFolderLength}) {
     let ImageList = (
         <div className='grid grid-cols-2 gap-x-5 gap-y-5 md:gap-x-24 md:gap-y-10'>
             {designImages.map((image) => (
-                    <Image 
+                    // <Image 
+                    //     key={image}
+                    //     src={image}
+                    //     height={550}
+                    //     width={550}
+                    //     className='border-2 border-agent-purple'
+                    //     placeholder='blur'
+                    //     blurDataURL='/placeholderImage'
+                        
+                    // />          
+                    <Zoom>
+
+                        <img 
                         key={image}
                         src={image}
                         height={550}
                         width={550}
-                        className='border-2 border-agent-purple'
-                        placeholder='blur'
-                        blurDataURL='/placeholderImage'
-                        
-                    />                
+                        className='border-2 border-agent-purple z-40 overflow-y-hidden'    
+                         />                
+                    </Zoom>          
                 )
             )}
         </div>

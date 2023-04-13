@@ -1,10 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
+// import Zoom from 'next-image-zoom' 
 import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import fs from 'fs'
 import path from 'path'
+import React from 'react'
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
+
 
 
 export async function getStaticProps() {
@@ -30,19 +35,27 @@ export default function Design({designFolderLength}) {
     }
 
     let ImageList = (
-        <div className='grid grid-cols-2 gap-x-5 gap-y-5 md:gap-x-24 md:gap-y-10'>
+        <div className='grid grid-cols-2 gap-x-5 gap-y-5 md:gap-x-24 md:gap-y-10 z-40 h-full relative my-20'>
             {designImages.map((image) => (
                     
-                    <Image 
-                        key={image}
-                        src={image}
-                        height={550}
-                        width={550}
-                        className='border-2 border-agent-purple'
-                         placeholder='blur'
-                        blurDataURL='/placeholderImage'
+                    // <Zoom
+                    //     key={image}
+                    //     src={image}
+                    //     height={550}
+                    //     width={550}
+                    //     className='border-2 border-agent-purple z-40 overflow-y-hidden'
                         
+                    // />
+                    <Zoom>
+
+                    <img 
+                    key={image}
+                    src={image}
+                    height={550}
+                    width={550}
+                    className='border-2 border-agent-purple z-40 overflow-y-hidden'    
                     />                
+                    </Zoom>
                 )
             )}
         </div>
@@ -70,9 +83,7 @@ export default function Design({designFolderLength}) {
                     <h3 className='text-6xl text-agent-purple text-center overflow-y-hidden font-bold '>BASKI</h3>
                     <p className='text-xl text-center'>Ofset ve Dijital</p>
                 </div>
-                <div className='mt-20 mb-20'>
-                    {ImageList}
-                </div>
+                {ImageList}
             </main>
             <Footer />
         </>
