@@ -19,10 +19,10 @@ export default function ContactUs() {
     const [phoneInput, setPhoneInput] = useState("")
     const [messageInput, setMessageInput] = useState("")
 
-    const [nameBlur, setNameBlur] = useState(false)
-    const [emailBlur, setEmailBlur] = useState(false)
-    const [phoneBlur, setPhoneBlur] = useState(false)
-    const [messageBlur, setMessageBlur] = useState(false)
+    const [nameBlur, setNameBlur] = useState(true)
+    const [emailBlur, setEmailBlur] = useState(true)
+    const [phoneBlur, setPhoneBlur] = useState(true)
+    const [messageBlur, setMessageBlur] = useState(true)
 
     const [state, setState] = useState(initState);
     const { values, isLoading, error } = state;
@@ -105,7 +105,7 @@ export default function ContactUs() {
                                 <input 
                                 value={phoneInput}
                                 onChange={(e) => setPhoneInput(e.target.value)}
-                                onBlur={(e) => e.target.value.length <= 4 || e.target.value.length >= 18 || e.target.value.match(/^[A-Za-z]*$/) ? setPhoneBlur(false) : setPhoneBlur(true)} 
+                                onBlur={(e) => e.target.value.length >= 4 && e.target.value.length <= 18 && e.target.value.match(/^[0-9]*$/) ? setPhoneBlur(true) : setPhoneBlur(false)} 
                                 maxLength={18}
                                 className={`${phoneBlur ? "" : "border-red-500"} border-b-2 border-agent-gray text-lg md:text-2xl placeholder:text-black/60 w-full focus:text-agent-purple focus:outline-none focus:border-agent-purple focus:placeholder:text-agent-purple transition-colors duration-200`} 
                                  placeholder='* TELEFON' 
@@ -130,7 +130,7 @@ export default function ContactUs() {
                     </div>
                     <button   
                        
-                        disabled={ !nameBlur || !emailBlur || !phoneBlur || !messageBlur}
+                        disabled={ nameInput === "" || emailInput === "" || phoneInput === "" || messageInput === "" || !nameInput || !phoneInput || !emailInput || !messageInput}
                         onClick={onSubmit} 
                         className={`${isLoading ? "p-1.5" : "p-1"} text-white font-bold text-2xl bg-agent-purple w-full md:w-5/12 self-end flex items-center justify-center mb-5 md:m-0 transition-all duration-200 disabled:bg-agent-purple/50`}>
                         <p className={`${isLoading ? "hidden" : ""}`}>GÖNDER</p>
