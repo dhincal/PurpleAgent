@@ -32,7 +32,9 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <button className='bg-agent-purple text-white font-medium text-xl tracking-wide p-2 px-5 rounded-full mt-10'>TANIŞALIM</button>
+            <NextLink href="/kimiz">
+              <button className='bg-agent-purple text-white font-medium text-xl tracking-wide p-2 px-5 rounded-full mt-10'>TANIŞALIM</button>
+            </NextLink>
           </div>
         </main>
         <nav className='absolute bottom-0 bg-gradient-to-r from-agent-purple from-10% via-agent-dark via-70% to-agent-dark flex text-white font-light text-xl w-screen justify-between p-4'>
@@ -66,7 +68,10 @@ export default function Home() {
                 <h3 className='text-white text-4xl w-full font-bold tracking-widest overflow-y-hidden'>ÇÖZÜM ORTAĞI</h3>
               </div>
               <div>
-                <button className='bg-agent-purple text-white font-medium text-3xl tracking-wide p-2 px-5 rounded-full'>TANIŞALIM</button>
+                <NextLink href="/kimiz">
+
+                  <button className='bg-agent-purple text-white font-medium text-3xl tracking-wide p-2 px-5 rounded-full'>TANIŞALIM</button>
+                </NextLink>
               </div>
             </div>
           </div>
@@ -154,7 +159,10 @@ export default function Home() {
                 <h3 className='text-white text-5xl w-full font-bold tracking-widest overflow-y-hidden'>ÇÖZÜM ORTAĞI</h3>
               </div>
               <div className='h-fit'>
-                <button className='bg-agent-purple text-white font-medium text-4xl tracking-wide p-2 px-5 rounded-full'>TANIŞALIM</button>
+                <NextLink href="/kimiz">
+
+                  <button className='bg-agent-purple text-white font-medium text-4xl tracking-wide p-2 px-5 rounded-full'>TANIŞALIM</button>
+                </NextLink>
               </div>
             </div>
           </div>
