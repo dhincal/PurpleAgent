@@ -25,7 +25,7 @@ export default function Home() {
                     width={350}
                 />
             </Link>
-            <h3 className='text-6xl text-agent-purple text-center overflow-y-hidden font-bold '>KiMiZ BiZ</h3>
+            <h3 className='text-3xl md:text-4xl text-agent-purple text-center overflow-y-hidden font-bold '>KiMiZ BiZ</h3>
            </div>
             <p className='text-2xl font-light text-center'> 
                 Yaklaşık 15 yıldır Reklam ve Baskı dünyasının içinde satış ve üretim konularında uzmanlaşmış bir ekibiz.

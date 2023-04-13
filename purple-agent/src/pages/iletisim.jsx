@@ -73,7 +73,7 @@ export default function ContactUs() {
                     />
                 </Link>
                 <form className='flex flex-col gap-y-5 w-full overflow-y-hidden' onSubmit={(e) => e.preventDefault()}>
-                    <h3 className='text-4xl md:text-6xl text-agent-purple text-center overflow-hidden font-bold whitespace-nowrap h-20'>BiZE ULAŞIN</h3>
+                    <h3 className=' text-3xl md:text-4xl text-agent-purple text-center overflow-hidden font-bold whitespace-nowrap h-20'>BiZE ULAŞIN</h3>
                     
                     <div className='flex gap-x-24 w-full justify-between flex-col gap-y-12 md:flex-row'>
                         <div className='flex flex-col items-center gap-y-5 md:gap-y-20 w-full md:w-5/12'>
