@@ -4,11 +4,21 @@ import { Bars3Icon } from '@heroicons/react/24/outline'
 import { XMarkIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
+
 
 
 export default function Navbar() {
 
+    const router = useRouter();
+
+    const [isIndex, setIsIndex] = useState(router.pathname === "/")
     const [sidebar, setSideBar] = useState(false);
+
+    const goToContent = () => {
+        document.getElementById('pressTablet').scrollIntoView({ behavior: 'smooth', block: "center" });
+        document.getElementById('pressDesktop').scrollIntoView({ behavior: 'smooth', block: "center" });
+    }
 
     return (
         <>
@@ -22,11 +32,14 @@ export default function Navbar() {
                 <NextLink href="/kimiz">
                     <p>KİMİZ BİZ</p>
                 </NextLink>
-                <NextLink href="/" scroll={true}>
+                <NextLink href={"/"} className={`${isIndex ? "hidden" : ""}`}>
                     <p>
                         NE YAPIYORUZ
                     </p>
                 </NextLink>
+                <p onClick={goToContent} className={`${isIndex ? "" : "hidden"} cursor-pointer`}>
+                    NE YAPIYORUZ
+                </p>
                 <NextLink href="/iletisim">
                     <p>
                         BİZE ULAŞIN

@@ -76,7 +76,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='flex justify-evenly gap-y-10 -translate-y-48 flex-wrap'>
+        <div id='pressTablet' className='flex justify-evenly gap-y-10 -translate-y-48 flex-wrap'>
           <div className='flex flex-col items-center gap-y-5 z-40 w-fit px-4'>
             <div className='relative w-[350px] h-[350px] rounded-full border-4 border-agent-purple z-40'>
               <Image src="/design.png"
@@ -167,7 +167,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='flex justify-evenly gap-y-10 -translate-y-48 flex-wrap'>
+        <div id='pressDesktop' className='flex justify-evenly gap-y-10 -translate-y-48 flex-wrap'>
           <div className='flex flex-col items-center gap-y-5 z-40 w-fit px-4'>
             <div className='relative w-[350px] h-[350px] rounded-full border-4 border-agent-purple z-40'>
               <Image src="/design.png"
