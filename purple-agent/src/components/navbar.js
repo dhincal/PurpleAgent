@@ -1,11 +1,15 @@
 import Head from 'next/head'
 import NextLink from 'next/link'
 import { Bars3Icon } from '@heroicons/react/24/outline'
+import { XMarkIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
-
+import { useState } from 'react'
 
 
 export default function Navbar() {
+
+    const [sidebar, setSideBar] = useState(false);
+
     return (
         <>
             <Head>
@@ -29,13 +33,30 @@ export default function Navbar() {
                     </p>
                 </NextLink>
             </nav>
-            <nav className='md:hidden bg-white flex justify-between w-screen p-4'>
+            <div className={`${sidebar ? "absolute mobileSidebar" : " -translate-x-[100vw]"}  gap-y-5 flex flex-col bg-white absolute h-screen w-[75vw] overflow-y-hidden z-50 p-5 transition-all duration-300`}>
+                <button onClick={() => setSideBar(!sidebar)}>
+                    <XMarkIcon className="w-10" />
+                </button>
+                <NextLink href="/">
+                    <button className='text-black font-semibold text-2xl'>Ne Yapıyoruz</button>
+                </NextLink>
+                <NextLink href="/iletisim">
+                    <button className='text-black font-semibold text-2xl'>Bize Ulaşın</button>
+                </NextLink>
+                <NextLink href="/kimiz">
+                    <button className='text-black font-semibold text-2xl'>Kimiz Biz</button>
+                </NextLink>
+            </div>
+            <nav className='md:hidden bg-white flex flex-row-reverse justify-between w-screen p-4 overflow-y-hidden'>
                 <Image src="/logo.png"
                     height={400}
                     width={150}
                 />
-                <Bars3Icon className='w-12' />
+                <button onClick={() => setSideBar(!sidebar)}>
+                    <Bars3Icon className='w-12' />
+                </button>
             </nav>
+
         </>
     )
 }
