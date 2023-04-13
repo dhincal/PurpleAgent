@@ -39,6 +39,8 @@ export default function Design({designFolderLength}) {
                         height={550}
                         width={550}
                         className='border-2 border-agent-purple'
+                         placeholder='blur'
+                        blurDataURL='/placeholderImage'
                         
                     />                
                 )
@@ -49,7 +51,7 @@ export default function Design({designFolderLength}) {
     return (
         <>
             <Head>
-                <title>Purple Agent - Promosyon</title>
+                <title>Purple Agent - Baskı</title>
                 <meta name="description" content="Purple Agent" />
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />

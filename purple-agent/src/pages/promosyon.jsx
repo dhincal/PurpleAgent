@@ -38,6 +38,8 @@ export default function Design({designFolderLength}) {
                         height={550}
                         width={550}
                         className='border-2 border-agent-purple'
+                        placeholder='blur'
+                        blurDataURL='/placeholderImage'
                         
                     />                
                 )

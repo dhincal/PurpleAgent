@@ -36,13 +36,13 @@ export default function Home() {
           </div>
         </main>
         <nav className='absolute bottom-0 bg-gradient-to-r from-agent-purple from-10% via-agent-dark via-70% to-agent-dark flex text-white font-light text-xl w-screen justify-between p-4'>
-          <NextLink href="/design">
+          <NextLink href="/tasarim">
             <p>TASARIM</p>
           </NextLink>
-          <NextLink href="/press">
+          <NextLink href="/baski">
             <p className=''>BASKI</p>
           </NextLink>
-          <NextLink href="/promotion">
+          <NextLink href="/promosyon">
             <p>PROMOSYON</p>
           </NextLink>
         </nav>
@@ -86,7 +86,7 @@ export default function Home() {
               İçeriklerinizin kurumsal kimliğinize en uygun şekilde,<br />
               en hızlı ve en eşsiz tasarımları için<br />
               PURPLE AJANS BURADA</p>
-            <NextLink href="/design" className='w-full flex justify-center'>
+            <NextLink href="/tasarim" className='w-full flex justify-center'>
               <button className='text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider mt-3'>
                 İNCELEYİN
               </button>
@@ -106,7 +106,7 @@ export default function Home() {
               Kataloglarınız, ambalajlarınız ya da kartvizitinizin<br />
               en hızlı ve en ekonomik baskıları için<br />
               PURPLE AJANS BURADA</p>
-            <NextLink href="/press" className='w-full flex justify-center'>
+            <NextLink href="/baski" className='w-full flex justify-center'>
               <button className='text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider mt-3'>
                 İNCELEYİN
               </button>
@@ -127,7 +127,7 @@ export default function Home() {
               kurumsal kimliğinize en uygun şekilde,<br />
               en hızlı ve en ekonomik tedariği için<br />
               PURPLE AJANS BURADA</p>
-            <NextLink href="/promotion" className='w-full flex justify-center'>
+            <NextLink href="/promosyon" className='w-full flex justify-center'>
               <button className='text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider mt-3'>
                 İNCELEYİN
               </button>
@@ -174,7 +174,7 @@ export default function Home() {
               İçeriklerinizin kurumsal kimliğinize en uygun şekilde,<br />
               en hızlı ve en eşsiz tasarımları için<br />
               PURPLE AJANS BURADA</p>
-            <NextLink href="/design" className='w-full flex justify-center'>
+            <NextLink href="/tasarim" className='w-full flex justify-center'>
               <button className='text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider mt-3'>
                 İNCELEYİN
               </button>
@@ -194,7 +194,7 @@ export default function Home() {
               Kataloglarınız, ambalajlarınız ya da kartvizitinizin<br />
               en hızlı ve en ekonomik baskıları için<br />
               PURPLE AJANS BURADA</p>
-            <NextLink href="/press" className='w-full flex justify-center'>
+            <NextLink href="/baski" className='w-full flex justify-center'>
               <button className='text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider mt-3'>
                 İNCELEYİN
               </button>
@@ -215,7 +215,7 @@ export default function Home() {
               kurumsal kimliğinize en uygun şekilde,<br />
               en hızlı ve en ekonomik tedariği için<br />
               PURPLE AJANS BURADA</p>
-            <NextLink href="/promotion" className='w-full flex justify-center'>
+            <NextLink href="/promosyon" className='w-full flex justify-center'>
               <button className='text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider mt-3'>
                 İNCELEYİN
               </button>
