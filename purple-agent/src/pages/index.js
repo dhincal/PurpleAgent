@@ -66,44 +66,15 @@ export default function Home() {
       </mobile>
       <tablet className="hidden md:block xl:hidden">
         <Navbar />
-        <div className="px-12 bg-gradient-to-b from-agent-dark from-40% to-agent-purple pb-64 -z-30">
-          <div className="bg-agent-gray relative h-[70vh] flex">
-            <Image src={flameurl} className="bottom-0 absolute z-10" />
-
-            <div className="z-20 flex flex-col gap-y-16 mt-16 pl-16">
-              <Image
-                src="/logo.png"
-                height={400}
-                width={400}
-                className="-ml-6"
-              />
-              <div className="flex flex-col">
-                <h3 className="text-white text-4xl w-full font-bold tracking-widest overflow-y-hidden">
-                  KURUMSAL
-                </h3>
-                <h5 className="text-agent-purple font-semibold overflow-y-hidden text-4xl">
-                  baskı hizmetlerinde
-                </h5>
-                <h3 className="text-white text-4xl w-full font-bold tracking-widest overflow-y-hidden">
-                  ÇÖZÜM ORTAĞI
-                </h3>
-              </div>
-              <div>
-                <NextLink href="/kimiz">
-                  <button className="bg-agent-purple text-white font-medium text-3xl tracking-wide p-2 px-5 rounded-full">
-                    TANIŞALIM
-                  </button>
-                </NextLink>
-              </div>
-            </div>
-          </div>
+        <div className="px-20 pb-64 -z-30">
+          <Slider />
         </div>
         <div
           id="pressTablet"
           className="flex justify-evenly gap-y-10 -translate-y-48 flex-wrap"
         >
           <div className="flex flex-col items-center gap-y-5 z-40 w-fit px-4">
-            <div className="relative w-[350px] h-[350px] rounded-full border-4 border-agent-purple z-40">
+            <div className="relative w-[350px] h-[350px] rounded-full border-4 border-agent-orange z-40">
               <Image src="/design.png" className="object-cover z-40" fill />
             </div>
             <h3 className="text-5xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
@@ -129,7 +100,7 @@ export default function Home() {
             </NextLink>
           </div>
           <div className="flex flex-col items-center gap-y-5 z-40 w-fit px-4">
-            <div className="relative w-[350px] h-[350px] rounded-full border-4 border-agent-purple z-40">
+            <div className="relative w-[350px] h-[350px] rounded-full border-4 border-agent-orange z-40">
               <Image src="/press.png" className="object-cover z-40" fill />
             </div>
             <h3 className="text-5xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
