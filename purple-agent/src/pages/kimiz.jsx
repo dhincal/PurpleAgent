@@ -9,9 +9,8 @@ export default function Home() {
   return (
     <>
         <Head>
-            <title>Purple Ajans - Kimiz Biz</title>
+            <title>Purple Basım - Kimiz Biz</title>
             <meta name="description" content="Purple Agent" />
-            <link rel="shortcut icon" href="/icon.ico" />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
             <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -20,12 +19,12 @@ export default function Home() {
         <main className='flex flex-col items-center gap-y-10 md:px-[20vw] px-10'>
            <div className='mt-10'>
              <Link href="/">
-                <Image src="/logo.png"
+                <Image src="/newLogo.jpg"
                     height={400}
                     width={350}
                 />
             </Link>
-            <h3 className='text-3xl md:text-4xl text-agent-purple text-center overflow-y-hidden font-bold '>KiMiZ BiZ</h3>
+            <h3 className='text-3xl md:text-4xl text-agent-purple text-center overflow-y-hidden font-bold mt-20'>KiMiZ BiZ</h3>
            </div>
             <p className='text-2xl font-light text-center'> 
                 Yaklaşık 15 yıldır Reklam ve Baskı dünyasının içinde satış ve üretim konularında uzmanlaşmış bir ekibiz.

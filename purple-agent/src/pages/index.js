@@ -12,7 +12,6 @@ export default function Home() {
       <Head>
         <title>Purple Ajans</title>
         <meta name="description" content="Purple Agent" />
-        <link rel="shortcut icon" href="/icon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

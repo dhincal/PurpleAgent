@@ -65,23 +65,22 @@ export default function Design({designFolderLength}) {
     return (
         <>
             <Head>
-                <title>Purple Agent - Baskı</title>
+                <title>Purple Basım - Baskı</title>
                 <meta name="description" content="Purple Agent" />
-                <link rel="shortcut icon" href="/icon.ico" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
                 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
             </Head>
             <Navbar></Navbar>
             <main className='flex flex-col items-center gap-y-2 px-5'>
-                <Link href="/">
-                    <Image src="/logo.png"
+                <Link href="/" className='mt-10'>
+                    <Image src="/newLogo.jpg"
                     height={400}
                     width={350}
                     />
                 </Link>
                 <div className='flex flex-col gap-y-1 tracking-wider'>
-                    <h3 className='text-3xl md:text-4xl  text-agent-purple text-center overflow-y-hidden font-bold '>BASKI</h3>
+                    <h3 className='text-3xl md:text-4xl  text-agent-purple text-center overflow-y-hidden font-bold mt-10'>BASKI</h3>
                     <p className='md:text-lg text-sm text-center'>Ofset ve Dijital</p>
                 </div>
                 {ImageList}

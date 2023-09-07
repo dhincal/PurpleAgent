@@ -57,9 +57,8 @@ export default function ContactUs() {
     return (
         <>
             <Head>
-                <title>Purple Agent - İletişim</title>
+                <title>Purple Basım - İletişim</title>
                 <meta name="description" content="Purple Agent" />
-                <link rel="shortcut icon" href="/icon.ico" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
                 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -67,7 +66,7 @@ export default function ContactUs() {
             <Navbar></Navbar>
             <main className='flex flex-col items-center gap-y-2 px-5'>
                 <Link href="/">
-                    <Image src="/logo.png"
+                    <Image src="/newLogo.jpg"
                     height={400}
                     width={350}
                     />
