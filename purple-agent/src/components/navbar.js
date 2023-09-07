@@ -77,9 +77,11 @@ export default function Navbar() {
         </NextLink>
       </div>
       <nav className="md:hidden bg-white flex flex-row-reverse justify-between w-screen p-4 overflow-y-hidden">
-        <Image src="/logo.png" height={400} width={150} />
+        <NextLink href="/">
+          <Image src="/newLogo.jpg" height={300} width={100} />
+        </NextLink>
         <button onClick={() => setSideBar(!sidebar)}>
-          <Bars3Icon className="w-12" />
+          <Bars3Icon className="w-12 stroke-agent-orange" />
         </button>
       </nav>
     </>
