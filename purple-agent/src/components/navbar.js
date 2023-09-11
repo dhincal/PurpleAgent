@@ -35,7 +35,7 @@ export default function Navbar() {
           rel="stylesheet"
         />
       </Head>
-      <nav className="hidden md:flex justify-center w-screen bg-black font-semibold tracking-widest text-xl text-white gap-x-16 py-10 ">
+      <nav className="hidden md:flex justify-center w-screen bg-black font-semibold tracking-widest text-xl text-white gap-x-16 py-5 ">
         <NextLink href="/kimiz">
           <p>KİMİZ BİZ</p>
         </NextLink>

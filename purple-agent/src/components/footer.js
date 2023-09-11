@@ -8,7 +8,7 @@ export default function Footer() {
       <footer className="bg-black hidden xl:flex py-12">
         <div className="flex justify-center items-center w-1/3">
           <div>
-            <Image src="/newLogoWhite.png" height={125} width={400} />
+            <Image src="/newLogoWhite.png" height={125} width={300} />
           </div>
         </div>
         <div className="px-20 py-5 flex flex-col border-x-2 border-white text-left text-white justify-center">
