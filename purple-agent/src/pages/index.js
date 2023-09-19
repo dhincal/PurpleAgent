@@ -34,10 +34,10 @@ export default function Home() {
             className="flex justify-evenly gap-y-10 mt-14 flex-wrap"
           >
             <div className="flex flex-col items-center gap-y-5 z-40 w-fit px-4">
-              <div className="relative w-[350px] h-[350px] rounded-full border-4 border-agent-orange z-40">
+              <div className="relative w-[260px] h-[260px] rounded-full border-4 border-agent-orange z-40">
                 <Image src="/design.png" className="object-cover z-40" fill />
               </div>
-              <h3 className="text-5xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
+              <h3 className="text-4xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
                 TASARIM
               </h3>
               <p className="text-center leading-5">
@@ -60,10 +60,10 @@ export default function Home() {
               </NextLink>
             </div>
             <div className="flex flex-col items-center gap-y-5 z-40 w-fit px-4">
-              <div className="relative w-[350px] h-[350px] rounded-full border-4 border-agent-orange z-40">
+              <div className="relative w-[260px] h-[260px] rounded-full border-4 border-agent-orange z-40">
                 <Image src="/press.png" className="object-cover z-40" fill />
               </div>
-              <h3 className="text-5xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
+              <h3 className="text-4xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
                 BASKI
               </h3>
               <p className="text-center leading-5">
@@ -86,10 +86,10 @@ export default function Home() {
               </NextLink>
             </div>
             <div className="flex flex-col items-center gap-y-5 z-40 w-fit px-4">
-              <div className="relative w-[350px] h-[350px] rounded-full border-4 border-agent-orange z-40">
+              <div className="relative w-[260px] h-[260px] rounded-full border-4 border-agent-orange z-40">
                 <Image src="/supply.png" className="object-cover z-40" fill />
               </div>
-              <h3 className="text-5xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
+              <h3 className="text-4xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
                 PROMOSYON
               </h3>
               <p className="text-center leading-5">
@@ -118,14 +118,14 @@ export default function Home() {
             </div>
           </div>
         </main>
-        <nav className="mt-14 flex flex-row justify-between px-3 py-2 text-lg w-screen text-white font-bold bg-agent-purple">
+        <nav className="mt-14 grid grid-cols-3 px-3 py-2 text-lg w-screen text-white font-bold bg-agent-purple">
           <NextLink href="/">
             <button className="">Ne Yapıyoruz</button>
           </NextLink>
-          <NextLink href="/iletisim">
+          <NextLink href="/iletisim" className="flex justify-center">
             <button className="">Bize Ulaşın</button>
           </NextLink>
-          <NextLink href="/kimiz">
+          <NextLink href="/kimiz" className="flex justify-end">
             <button className="">Kimiz Biz</button>
           </NextLink>
         </nav>
@@ -140,10 +140,10 @@ export default function Home() {
           className="flex justify-evenly gap-y-10 -translate-y-48 flex-wrap"
         >
           <div className="flex flex-col items-center gap-y-5 z-40 w-fit px-4">
-            <div className="relative w-[350px] h-[350px] rounded-full border-4 border-agent-orange z-40">
+            <div className="relative w-[260px] h-[260px] rounded-full border-4 border-agent-orange z-40">
               <Image src="/design.png" className="object-cover z-40" fill />
             </div>
-            <h3 className="text-5xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
+            <h3 className="text-4xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
               TASARIM
             </h3>
             <p className="text-center leading-5">
@@ -166,10 +166,10 @@ export default function Home() {
             </NextLink>
           </div>
           <div className="flex flex-col items-center gap-y-5 z-40 w-fit px-4">
-            <div className="relative w-[350px] h-[350px] rounded-full border-4 border-agent-orange z-40">
+            <div className="relative w-[260px] h-[260px] rounded-full border-4 border-agent-orange z-40">
               <Image src="/press.png" className="object-cover z-40" fill />
             </div>
-            <h3 className="text-5xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
+            <h3 className="text-4xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
               BASKI
             </h3>
             <p className="text-center leading-5">
@@ -192,10 +192,10 @@ export default function Home() {
             </NextLink>
           </div>
           <div className="flex flex-col items-center gap-y-5 z-40 w-fit px-4">
-            <div className="relative w-[350px] h-[350px] rounded-full border-4 border-agent-orange z-40">
+            <div className="relative w-[260px] h-[260px] rounded-full border-4 border-agent-orange z-40">
               <Image src="/supply.png" className="object-cover z-40" fill />
             </div>
-            <h3 className="text-5xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
+            <h3 className="text-4xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
               PROMOSYON
             </h3>
             <p className="text-center leading-5">
@@ -224,18 +224,18 @@ export default function Home() {
       </tablet>
       <desktop className="hidden xl:block">
         <Navbar />
-        <div className="px-20 pb-64 -z-30">
+        <div className="px-20 pb-16 -z-30">
           <Slider />
         </div>
         <div
           id="pressDesktop"
-          className="flex justify-evenly gap-y-10 -translate-y-48 flex-wrap"
+          className="flex justify-evenly gap-y-10 flex-wrap mb-16"
         >
           <div className="flex flex-col items-center gap-y-5 z-40 w-fit px-4">
-            <div className="relative w-[350px] h-[350px] rounded-full border-4 border-agent-orange z-40">
+            <div className="relative w-[260px] h-[260px] rounded-full border-4 border-agent-orange z-40">
               <Image src="/design.png" className="object-cover z-40" fill />
             </div>
-            <h3 className="text-5xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
+            <h3 className="text-4xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
               TASARIM
             </h3>
             <p className="text-center leading-5">
@@ -251,17 +251,20 @@ export default function Home() {
               <br />
               PURPLE BASIM BURADA
             </p>
-            <NextLink href="/tasarim" className="w-full flex justify-center">
-              <button className="text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider mt-3">
+            <NextLink
+              href="/tasarim"
+              className="w-full flex justify-center mt-8"
+            >
+              <button className="text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider">
                 İNCELEYİN
               </button>
             </NextLink>
           </div>
           <div className="flex flex-col items-center gap-y-5 z-40 w-fit px-4">
-            <div className="relative w-[350px] h-[350px] rounded-full border-4 border-agent-orange z-40">
+            <div className="relative w-[260px] h-[260px] rounded-full border-4 border-agent-orange z-40">
               <Image src="/press.png" className="object-cover z-40" fill />
             </div>
-            <h3 className="text-5xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
+            <h3 className="text-4xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
               BASKI
             </h3>
             <p className="text-center leading-5">
@@ -277,17 +280,17 @@ export default function Home() {
               <br />
               PURPLE BASIM BURADA
             </p>
-            <NextLink href="/baski" className="w-full flex justify-center">
-              <button className="text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider mt-3">
+            <NextLink href="/baski" className="w-full flex justify-center mt-8">
+              <button className="text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider">
                 İNCELEYİN
               </button>
             </NextLink>
           </div>
           <div className="flex flex-col items-center gap-y-5 z-40 w-fit px-4">
-            <div className="relative w-[350px] h-[350px] rounded-full border-4 border-agent-orange z-40">
+            <div className="relative w-[260px] h-[260px] rounded-full border-4 border-agent-orange z-40">
               <Image src="/supply.png" className="object-cover z-40" fill />
             </div>
-            <h3 className="text-5xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
+            <h3 className="text-4xl text-agent-purple text-center overflow-y-hidden font-bold tracking-wider">
               PROMOSYON
             </h3>
             <p className="text-center leading-5">

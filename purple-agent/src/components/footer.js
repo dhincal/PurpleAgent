@@ -5,22 +5,22 @@ import { Instagram, Linkedin, Play, Facebook } from "lucide-react";
 export default function Footer() {
   return (
     <>
-      <footer className="bg-black hidden xl:flex py-12">
+      <footer className="bg-black hidden xl:flex py-6">
         <div className="flex justify-center items-center w-1/3">
           <div>
-            <Image src="/newLogoWhite.png" height={125} width={300} />
+            <Image src="/newLogoWhite.png" height={125} width={250} />
           </div>
         </div>
-        <div className="px-20 py-5 flex flex-col border-x-2 border-white text-left text-white justify-center">
-          <p className="text-2xl font-bold">cigdem@purplebasim.com</p>
-          <p className="text-2xl font-bold mb-5">0535 689 42 82</p>
-          <p className="text-2xl font-bold">
+        <div className="font-semibold px-20 py-5 flex flex-col text-lg border-x-2 border-white text-left text-white justify-center w-5/12">
+          <p className="">cigdem@purplebasim.com</p>
+          <p className="mb-5">0535 689 42 82</p>
+          <p className="">
             Maltepe Mah. Litros Yolu Sk. Matbaacılar Sitesi ZC5
           </p>
-          <p className="text-2xl font-bold">Zeytinburnu/İstanbul</p>
+          <p className="">Zeytinburnu/İstanbul</p>
         </div>
 
-        <div className="grid xl:grid-cols-4 grid-cols-2 justify-center gap-x-3 px-10 items-center self-stretch w-1/4">
+        <div className="flex flex-wrap justify-center space-x-5 items-center w-1/3">
           <div className="bg-white rounded-full h-fit w-fit p-2">
             <Facebook size={36} className="fill-black" color="black" />
           </div>
@@ -38,7 +38,7 @@ export default function Footer() {
       <footer className="bg-black hidden md:flex xl:hidden py-6">
         <div className="flex justify-center w-1/3 items-center">
           <div>
-            <Image src="/newLogoWhite.png" height={100} width={250} />
+            <Image src="/newLogoWhite.png" height={100} width={200} />
           </div>
         </div>
         <div className="flex flex-col border-x-2 text-white border-white text-left justify-center items-center w-2/5">
