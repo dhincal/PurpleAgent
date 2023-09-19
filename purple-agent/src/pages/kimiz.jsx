@@ -21,7 +21,7 @@ export default function Home() {
              <Link href="/">
                 <Image src="/newLogo.jpg"
                     height={400}
-                    width={350}
+                    width={250}
                 />
             </Link>
             <h3 className='text-3xl md:text-4xl text-agent-purple text-center overflow-y-hidden font-bold mt-20'>KiMiZ BiZ</h3>

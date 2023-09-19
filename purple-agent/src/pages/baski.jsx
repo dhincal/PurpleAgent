@@ -76,7 +76,7 @@ export default function Design({designFolderLength}) {
                 <Link href="/" className='mt-10'>
                     <Image src="/newLogo.jpg"
                     height={400}
-                    width={350}
+                    width={250}
                     />
                 </Link>
                 <div className='flex flex-col gap-y-1 tracking-wider'>

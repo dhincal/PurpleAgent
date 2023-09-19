@@ -65,13 +65,13 @@ export default function ContactUs() {
             </Head>
             <Navbar></Navbar>
             <main className='flex flex-col items-center gap-y-2 px-5'>
-                <Link href="/">
+                <Link href="/" className='mt-10'>
                     <Image src="/newLogo.jpg"
                     height={400}
-                    width={350}
+                    width={250}
                     />
                 </Link>
-                <form className='flex flex-col gap-y-5 w-full overflow-y-hidden' onSubmit={(e) => e.preventDefault()}>
+                <form className='flex flex-col gap-y-5 w-full overflow-y-hidden mt-10' onSubmit={(e) => e.preventDefault()}>
                     <h3 className=' text-3xl md:text-4xl text-agent-purple text-center overflow-hidden font-bold whitespace-nowrap h-20'>BiZE ULAŞIN</h3>
                     
                     <div className='flex gap-x-24 w-full justify-between flex-col gap-y-12 md:flex-row'>
