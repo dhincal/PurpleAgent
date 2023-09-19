@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Purple Ajans</title>
+        <title>Purple Basım</title>
         <meta name="description" content="Purple Agent" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -51,7 +51,7 @@ export default function Home() {
                 <br />
                 en hızlı ve en eşsiz tasarımları için
                 <br />
-                PURPLE AJANS BURADA
+                PURPLE BASIM BURADA
               </p>
               <NextLink href="/tasarim" className="w-full flex justify-center">
                 <button className="text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider mt-3">
@@ -77,7 +77,7 @@ export default function Home() {
                 <br />
                 en hızlı ve en ekonomik baskıları için
                 <br />
-                PURPLE AJANS BURADA
+                PURPLE BASIM BURADA
               </p>
               <NextLink href="/baski" className="w-full flex justify-center">
                 <button className="text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider mt-3">
@@ -105,7 +105,7 @@ export default function Home() {
                 <br />
                 en hızlı ve en ekonomik tedariği için
                 <br />
-                PURPLE AJANS BURADA
+                PURPLE BASIM BURADA
               </p>
               <NextLink
                 href="/promosyon"
@@ -157,7 +157,7 @@ export default function Home() {
               <br />
               en hızlı ve en eşsiz tasarımları için
               <br />
-              PURPLE AJANS BURADA
+              PURPLE BASIM BURADA
             </p>
             <NextLink href="/tasarim" className="w-full flex justify-center">
               <button className="text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider mt-3">
@@ -183,7 +183,7 @@ export default function Home() {
               <br />
               en hızlı ve en ekonomik baskıları için
               <br />
-              PURPLE AJANS BURADA
+              PURPLE BASIM BURADA
             </p>
             <NextLink href="/baski" className="w-full flex justify-center">
               <button className="text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider mt-3">
@@ -211,7 +211,7 @@ export default function Home() {
               <br />
               en hızlı ve en ekonomik tedariği için
               <br />
-              PURPLE AJANS BURADA
+              PURPLE BASIM BURADA
             </p>
             <NextLink href="/promosyon" className="w-full flex justify-center">
               <button className="text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider mt-3">
@@ -249,7 +249,7 @@ export default function Home() {
               <br />
               en hızlı ve en eşsiz tasarımları için
               <br />
-              PURPLE AJANS BURADA
+              PURPLE BASIM BURADA
             </p>
             <NextLink href="/tasarim" className="w-full flex justify-center">
               <button className="text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider mt-3">
@@ -275,7 +275,7 @@ export default function Home() {
               <br />
               en hızlı ve en ekonomik baskıları için
               <br />
-              PURPLE AJANS BURADA
+              PURPLE BASIM BURADA
             </p>
             <NextLink href="/baski" className="w-full flex justify-center">
               <button className="text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider mt-3">
@@ -303,7 +303,7 @@ export default function Home() {
               <br />
               en hızlı ve en ekonomik tedariği için
               <br />
-              PURPLE AJANS BURADA
+              PURPLE BASIM BURADA
             </p>
             <NextLink href="/promosyon" className="w-full flex justify-center">
               <button className="text-xl border-t text-agent-purple border-agent-purple w-9/12 pt-4 font-medium tracking-wider mt-3">
