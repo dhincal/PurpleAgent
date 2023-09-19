@@ -104,10 +104,11 @@ export default function Slider({
           <div className="keen-slider__slide relative w-screen h-full my-auto border-b-[20px] border-agent-orange">
             <Image
               src={"/slider1.jpg"}
-              height={1080}
+              height={1920}
               width={1920}
               className="object-cover"
               alt="sliderImage1"
+              quality={100}
             />
           </div>
           <div className="keen-slider__slide relative w-screen h-full my-auto border-b-[20px] border-agent-orange">
