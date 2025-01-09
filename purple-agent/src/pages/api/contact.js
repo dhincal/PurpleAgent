@@ -1,6 +1,4 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
-import { mailOptions, sender } from "@/config/nodemailer";
+import { mailOptions, sender } from "../../config/nodemailer";
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
